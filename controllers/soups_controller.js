@@ -10,7 +10,7 @@ router.get("/", function (req, res) {
             soups: data
         };
         console.log(hbsObject);
-        res.render("main", hbsObject);
+        res.render("index", hbsObject);
     });
 });
 

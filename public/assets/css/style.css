@@ -1,6 +1,26 @@
 .jumbotron {
-    background-image: url("img/soup1.jpg");
+    background-image: url("../img/soup1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+body {
+    background-color: darkolivegreen;
+}
+
+.jumboText {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px black;
+
+}
+
+#cardBg {
+background-image: url("../img/tampopo.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+color: white;
+text-shadow: 2px 2px black;
 }

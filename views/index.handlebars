@@ -1,19 +1,18 @@
-<div class="container">
 
-    {{!-- jumbotron --}}
-    <div class="jumbotron">
-        <h1 class="display-4">SLURP DA SOUPS</h1>
-        <p class="lead">WE DON'T BLOW ON SOUP HERE, SLURP WHERE YOU SLUNK</p>
-        <hr class="my-4">
-        <form class="form-inline">
-            <div class="form-group mx-sm-3 mb-2">
-                <label for="inputPassword2" class="sr-only"></label>
-                <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary mb-2"><span class="fa fa-surprise"></span></button>
-        </form>
-    </div>
-    {{!-- end jumbo --}}
+<div class="container">
+{{!-- jumbotron --}}
+<div class="jumbotron">
+    <h1 class="display-4 jumboText">SLURP DA SOUPS</h1>
+    <p class="lead jumboText">WE DON'T BLOW ON SOUP HERE, SLURP!</p>
+    <form class="create-form">
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="soup" class="sr-only"></label>
+            <input type="text" class="form-control" id="soup" placeholder="Soup">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2"><span class="fa fa-surprise"></span></button>
+    </form>
+</div>
+{{!-- end jumbo --}}
 
     {{!-- Cards displaying soups --}}
     <div class="row">
@@ -22,12 +21,12 @@
                 <div class="card-header">
                     SOUPS TO SLURP
                 </div>
-                <div class="card-body">
+                <div class="card-body" id="cardBg">
                     <ul>
                         {{#each soups}}
-                        {{#unless devoured}}
+                        {{#unless slurped}}
                         <span><strong> {{this.id}} - {{this.name}} </strong></span>
-                        <button type="button" class="eatburger btn btn-warning" id="slurpBtn" data-id="{{this.id}}"
+                        <button type="button" class="soupSlurp btn btn-warning" id="slurpBtn" data-id="{{this.id}}"
                             data-newSlurped="{{slurp}}"><span class="fa fa-untensil-spoon"></span></button>
                         <hr>
                         {{/unless}}
