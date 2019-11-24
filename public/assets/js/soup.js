@@ -19,9 +19,25 @@ $(".create-form").on("submit", function (event){
           location.reload();
         }
       );
+});
 
+$(".soupSlurp").on("click", function(event) {
+    event.preventDefault();
 
-})
+    var id = $(this).data("id");
+    var newSlurped = {
+        slurped: 1
+    };
+
+    // Send the PUT request.
+    $.ajax("/api/soups/" + id, {
+        type: "PUT",
+        data: newSlurped
+    }).then(function() {
+        console.log("soup slurped");
+        location.reload();
+    });
+});
 
 
 

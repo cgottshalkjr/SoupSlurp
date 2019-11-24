@@ -3,11 +3,11 @@
 {{!-- jumbotron --}}
 <div class="jumbotron">
     <h1 class="display-4 jumboText">SLURP DA SOUPS</h1>
-    <p class="lead jumboText">WE DON'T BLOW ON SOUP HERE, SLURP!</p>
-    <form class="create-form">
+    <p class="lead jumboText">WE DON'T BLOW ON SOUP HERE, WE SLURP!</p>
+    <form class="form-inline create-form">
         <div class="form-group mx-sm-3 mb-2">
             <label for="soup" class="sr-only"></label>
-            <input type="text" class="form-control" id="soup" placeholder="Soup">
+            <input type="text" class="form-control" id="soup" name="soup" placeholder="Soup">
         </div>
         <button type="submit" class="btn btn-primary mb-2"><span class="fa fa-surprise"></span></button>
     </form>
@@ -25,6 +25,7 @@
                     <ul>
                         {{#each soups}}
                         {{#unless slurped}}
+                        {{soups}}
                         <span><strong> {{this.id}} - {{this.name}} </strong></span>
                         <button type="button" class="soupSlurp btn btn-warning" id="slurpBtn" data-id="{{this.id}}"
                             data-newSlurped="{{slurp}}"><span class="fa fa-untensil-spoon"></span></button>
