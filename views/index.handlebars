@@ -23,6 +23,16 @@
                     SOUPS TO SLURP
                 </div>
                 <div class="card-body">
+                    <ul>
+                        {{#each soups}}
+                        {{#unless devoured}}
+                        <span><strong> {{this.id}} - {{this.name}} </strong></span>
+                        <button type="button" class="eatburger btn btn-warning" id="slurpBtn" data-id="{{this.id}}"
+                            data-newSlurped="{{slurp}}"><span class="fa fa-untensil-spoon"></span></button>
+                        <hr>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
 
                 </div>
             </div>
@@ -34,6 +44,16 @@
                     SOUPS BEEN SLURPED
                 </div>
                 <div class="card-body">
+                    <ul>
+                        {{#each soups}}
+                        {{#if slurped}}
+                        <span><strong> {{this.id}} - {{this.name}} </strong></span>
+                        <button type="button" class="deleteSoup btn btn-danger" id="dumpSoup" data-id="{{this.id}}"
+                            data-newSlurped="{{slurp}}"><span class="fa fa-trash"></span></button>
+                        <hr>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
 
                 </div>
             </div>
