@@ -28,7 +28,7 @@
                         {{soups}}
                         <span class="soupText"><strong>{{this.id}} - {{this.name}}</strong></span>
                         <button type="button" class="soupSlurp btn btn-secondary margin" id="slurpBtn" data-id="{{this.id}}"
-                            data-newSlurped="{{slurp}}">SLURP</button>
+                            >SLURP</button>
                         <hr>
                         {{/unless}}
                         {{/each}}
@@ -47,11 +47,17 @@
                     <ul>
                         {{#each soups}}
                         {{#if slurped}}
-                       <span class="soupText"><strong>{{this.id}} - {{this.name}} </strong></span>
-                        <button type="button" class="deleteSoup btn btn-danger" id="dumpSoup" data-id="{{this.id}}"
+                        <div class="row">
+                            <div class="col-7">
+                                <span class="soupText"><strong>{{this.id}} - {{this.name}} </strong></span>
+                            </div>
+                            <div class="col-5">
+                                <button type="button" class="deleteSoup btn btn-danger" id="dumpSoup" data-id="{{this.id}}"
                             data-newSlurped="{{slurp}}"><span class="fa fa-trash"></span></button>
                             <button type="button" class="reorderSoup btn btn-danger" id="dumpSoup" data-id="{{this.id}}"
-                            data-newSlurped="{{slurp}}"><span class="fa fa-soup"></span>RE-ORDER</button>
+                            ><span class="fa fa-soup"></span>RE-ORDER</button>
+                            </div>
+                        </div>
                         <hr>
                         {{/if}}
                         {{/each}}

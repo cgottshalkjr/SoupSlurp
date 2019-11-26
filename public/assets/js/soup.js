@@ -17,6 +17,7 @@ $(function () {
         console.log("created new soup");
         // Reload the page to get the updated list
         location.reload();
+        // res.json(newSoup)
       }
     );
   });
@@ -26,7 +27,7 @@ $(function () {
 
     var id = $(this).data("id");
     var newSlurped = {
-      slurped: 1
+      slurped: true
     };
 
     // Send the PUT request.
@@ -58,7 +59,7 @@ $(function () {
 
     var id = $(this).data("id");
     var newSlurped = {
-      slurped: 0
+      slurped: false
     };
 
     // Send the PUT request.
