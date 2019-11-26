@@ -9,7 +9,7 @@
             <label for="soup" class="sr-only"></label>
             <input type="text" class="form-control" id="soup" name="soup" placeholder="Soup">
         </div>
-        <button type="submit" class="btn btn-primary mb-2"><span class="fa fa-surprise"></span></button>
+        <button type="submit" class="btn btn-danger mb-2">ENTER</button>
     </form>
 </div>
 {{!-- end jumbo --}}
@@ -26,9 +26,9 @@
                         {{#each soups}}
                         {{#unless slurped}}
                         {{soups}}
-                        <span><strong> {{this.id}} - {{this.name}} </strong></span>
-                        <button type="button" class="soupSlurp btn btn-warning" id="slurpBtn" data-id="{{this.id}}"
-                            data-newSlurped="{{slurp}}"><span class="fa fa-untensil-spoon"></span></button>
+                        {{this.id}} - {{this.name}}
+                        <button type="button" class="soupSlurp btn btn-secondary margin" id="slurpBtn" data-id="{{this.id}}"
+                            data-newSlurped="{{slurp}}">SLURP</button>
                         <hr>
                         {{/unless}}
                         {{/each}}
@@ -43,13 +43,15 @@
                 <div class="card-header">
                     SOUPS BEEN SLURPED
                 </div>
-                <div class="card-body">
+                <div class="card-body" id="cardBg2">
                     <ul>
                         {{#each soups}}
                         {{#if slurped}}
-                        <span><strong> {{this.id}} - {{this.name}} </strong></span>
+                         {{this.id}} - {{this.name}} 
                         <button type="button" class="deleteSoup btn btn-danger" id="dumpSoup" data-id="{{this.id}}"
                             data-newSlurped="{{slurp}}"><span class="fa fa-trash"></span></button>
+                            <button type="button" class="reorderSoup btn btn-danger" id="dumpSoup" data-id="{{this.id}}"
+                            data-newSlurped="{{slurp}}"><span class="fa fa-burger"></span></button>
                         <hr>
                         {{/if}}
                         {{/each}}
