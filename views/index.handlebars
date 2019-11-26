@@ -25,10 +25,16 @@
                     <ul>
                         {{#each soups}}
                         {{#unless slurped}}
+                        <div class="row">
+                            <div class="col-7">
                         {{soups}}
                         <span class="soupText"><strong>{{this.id}} - {{this.name}}</strong></span>
+                        </div>
+                        <div class="col-5">
                         <button type="button" class="soupSlurp btn btn-secondary margin" id="slurpBtn" data-id="{{this.id}}"
                             >SLURP</button>
+                            </div>
+                        </div>
                         <hr>
                         {{/unless}}
                         {{/each}}
