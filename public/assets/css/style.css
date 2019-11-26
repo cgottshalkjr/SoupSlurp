@@ -6,13 +6,14 @@
 }
 
 body {
-    background-color: darkolivegreen;
+    background-color: #2A324B;
 }
 
 .jumboText {
     text-align: center;
     color: white;
     text-shadow: 2px 2px black;
+    font-family: 'Permanent Marker', cursive;
 
 }
 
@@ -37,7 +38,29 @@ overflow-y: auto
     text-shadow: 2px 2px black;
     height: 350px;
     max-height: 350px;
-    overflow-y: auto
-    }
+    overflow-y: auto;
+}
+
+.soupText {
+    font-size: 20px;
+    
+}
+
+.card-header{
+    background-color: #F7C59F ;
+    color: black;
+    text-shadow: 1px 1px white;
+}
+
+.reorderSoup, .deleteSoup, .soupSlurp {
+    background-color: #767B91;
+    border: none;
+    margin: 5px;
+}
+
+.subBtn{
+    background-color: #767B91;
+    border: none;
+}
 
 

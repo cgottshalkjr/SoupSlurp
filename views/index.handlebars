@@ -2,14 +2,14 @@
 <div class="container">
 {{!-- jumbotron --}}
 <div class="jumbotron">
-    <h1 class="display-4 jumboText">SLURP DA SOUPS</h1>
+    <h1 class="display-4 jumboText"><strong>SLURP DA SOUPS</strong></h1>
     <p class="lead jumboText">WE DON'T BLOW ON SOUP HERE, WE SLURP!</p>
     <form class="form-inline create-form">
         <div class="form-group mx-sm-3 mb-2">
             <label for="soup" class="sr-only"></label>
             <input type="text" class="form-control" id="soup" name="soup" placeholder="Soup">
         </div>
-        <button type="submit" class="btn btn-danger mb-2">ENTER</button>
+        <button type="submit" class="btn btn-danger subBtn mb-2">ENTER</button>
     </form>
 </div>
 {{!-- end jumbo --}}
@@ -26,7 +26,7 @@
                         {{#each soups}}
                         {{#unless slurped}}
                         {{soups}}
-                        {{this.id}} - {{this.name}}
+                        <span class="soupText"><strong>{{this.id}} - {{this.name}}</strong></span>
                         <button type="button" class="soupSlurp btn btn-secondary margin" id="slurpBtn" data-id="{{this.id}}"
                             data-newSlurped="{{slurp}}">SLURP</button>
                         <hr>
@@ -47,11 +47,11 @@
                     <ul>
                         {{#each soups}}
                         {{#if slurped}}
-                         {{this.id}} - {{this.name}} 
+                       <span class="soupText"><strong>{{this.id}} - {{this.name}} </strong></span>
                         <button type="button" class="deleteSoup btn btn-danger" id="dumpSoup" data-id="{{this.id}}"
                             data-newSlurped="{{slurp}}"><span class="fa fa-trash"></span></button>
                             <button type="button" class="reorderSoup btn btn-danger" id="dumpSoup" data-id="{{this.id}}"
-                            data-newSlurped="{{slurp}}"><span class="fa fa-burger"></span></button>
+                            data-newSlurped="{{slurp}}"><span class="fa fa-soup"></span>RE-ORDER</button>
                         <hr>
                         {{/if}}
                         {{/each}}
