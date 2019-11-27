@@ -5,13 +5,15 @@ $(function () {
 
     var newSoup = {
       name: $("#soup").val().trim(),
-      slurped: 0
+      slurped: false
     };
 
     // Send the POST request.
     $.ajax("/api/soups", {
       type: "POST",
-      data: newSoup
+      data: JSON.stringify(newSoup),
+      dataType: "json",
+      contentType: "application/json"
     }).then(
       function () {
         console.log("created new soup");

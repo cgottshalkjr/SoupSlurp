@@ -1,18 +1,19 @@
-
 <div class="container">
-{{!-- jumbotron --}}
-<div class="jumbotron">
-    <h1 class="display-4 jumboText"><strong>SLURP DA SOUPS</strong></h1>
-    <p class="lead jumboText">WE DON'T BLOW ON SOUP HERE, WE SLURP!</p>
-    <form class="form-inline create-form">
-        <div class="form-group mx-sm-3 mb-2">
-            <label for="soup" class="sr-only"></label>
-            <input type="text" class="form-control" id="soup" name="soup" placeholder="Soup">
-        </div>
-        <button type="submit" class="btn btn-danger subBtn mb-2">ENTER</button>
-    </form>
-</div>
-{{!-- end jumbo --}}
+    {{!-- jumbotron --}}
+    <div class="jumbotron">
+        <h1 class="display-4 jumboText"><strong>SLURP DA SOUPS</strong></h1>
+        <p class="lead jumboText">WE DON'T BLOW ON SOUP HERE, WE SLURP!</p>
+        <form class="form-inline create-form">
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="soup" class="sr-only"></label>
+                <input type="text" class="form-control" id="soup" name="soup" placeholder="Soup">
+            </div>
+            <div class+"wrap">
+                <button type="submit" class="btn subBtn btn-two button mb-2">ENTER</button>
+            </div>
+        </form>
+    </div>
+    {{!-- end jumbo --}}
 
     {{!-- Cards displaying soups --}}
     <div class="row">
@@ -27,12 +28,12 @@
                         {{#unless slurped}}
                         <div class="row">
                             <div class="col-7">
-                        {{soups}}
-                        <span class="soupText"><strong>{{this.id}} - {{this.name}}</strong></span>
-                        </div>
-                        <div class="col-5">
-                        <button type="button" class="soupSlurp btn btn-secondary margin" id="slurpBtn" data-id="{{this.id}}"
-                            >SLURP</button>
+                                {{soups}}
+                                <span class="soupText"><strong>{{this.id}} - {{this.name}}</strong></span>
+                            </div>
+                            <div class="col-5 wrap">
+                                <button type="button" class="soupSlurp button btn" id="slurpBtn"
+                                    data-id="{{this.id}}">SLURP</button>
                             </div>
                         </div>
                         <hr>
@@ -57,11 +58,12 @@
                             <div class="col-7">
                                 <span class="soupText"><strong>{{this.id}} - {{this.name}} </strong></span>
                             </div>
-                            <div class="col-5">
-                                <button type="button" class="deleteSoup btn btn-danger" id="dumpSoup" data-id="{{this.id}}"
-                            data-newSlurped="{{slurp}}"><span class="fa fa-trash"></span></button>
-                            <button type="button" class="reorderSoup btn btn-danger" id="dumpSoup" data-id="{{this.id}}"
-                            ><span class="fa fa-soup"></span>RE-ORDER</button>
+                            <div class="col-5 wrap">
+                                <button type="button" class="deleteSoup btn btn-danger button" id="dumpSoup"
+                                    data-id="{{this.id}}" data-newSlurped="{{slurp}}"><span
+                                        class="fa fa-trash"></span></button>
+                                <button type="button" class="reorderSoup btn button" id="dumpSoup"
+                                    data-id="{{this.id}}"><span class="fa fa-soup"></span>RE-ORDER</button>
                             </div>
                         </div>
                         <hr>
