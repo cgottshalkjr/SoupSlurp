@@ -18,7 +18,7 @@ Navigate your way to the home page. Enter in any soup. AND ONLY SOUP! Get to slu
 
 ### Pictures of App in Action!
 ---
-![alt text](app/public/imgs/pagescreenshot.png "Home page")
+![alt text](../img/pagescreenshot.png "Home page")
 **View of Homepage**
 ---
 ---
